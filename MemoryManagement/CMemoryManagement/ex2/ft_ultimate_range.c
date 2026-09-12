@@ -6,7 +6,7 @@
 /*   By: dcarine <dcarine@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 16:42:26 by dcarine           #+#    #+#             */
-/*   Updated: 2026/09/11 19:33:14 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/09/12 14:25:04 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,19 @@ int	ft_ultimate_range(int **range, int min, int max)
 		return (0);
 	}
 	tab = malloc(sizeof(int) * size);
+	if (tab == NULL)
+	{
+		return (-1);
+	}
 	i = 0;
 	while (min < max)
 	{
 		tab[i] = min;
 		min++;
 		i++;
-		printf("%d ", tab[i]);
 	}
 	*range = tab;
-	return (**range);
+	return (i);
 }
 
 int	main(void)
