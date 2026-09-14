@@ -5,67 +5,89 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcarine <dcarine@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/12 15:33:33 by dcarine           #+#    #+#             */
-/*   Updated: 2026/09/12 16:32:59 by dcarine          ###   ########.fr       */
+/*   Created: 2026/09/14 14:36:59 by dcarine           #+#    #+#             */
+/*   Updated: 2026/09/14 19:09:09 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 
+int	ft_size_total(char **strs, char *sep)
+{
+	int	i;
+	int	j;
+	int	size;
+
+	size = 0;
+	i = 0;
+	while (*strs[i] != '\0')
+	{
+		j = 0;
+		while (strs[i][j] != '\0')
+		{
+			size++;
+			j++;
+		}
+		i++;
+	}
+	j = 0;
+	while (sep[j] != '\0')
+		j++;
+	size += (j * (i - 1));
+	return (size);
+}
+
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-    char	*r;
-    int		i;
+	char	*r;
+	int		i;
 	int		j;
-	
+	int		k;
+
 	r = malloc(sizeof(char) * (size + 1));
 	if (r == NULL)
-	{
-		**strs = *r;
-	}
+		*strs = NULL;
 	i = 0;
+	j = 0;
+	k = 0;
 	while (i < size)
 	{
 		j = 0;
 		while (strs[i][j] != '\0')
 		{
-			r[j] = strs[i][j];
+			r[k] = strs[i][j];
 			j++;
-		} 
-	    r[j + 1] = r[j] + *sep;
+			k++;
+		}
+		while (sep[j])
+		{
+			r[k] = sep[j];
+			j++;
+			k++;
+		}
+		i++;
 	}
-	
-	printf("%s\n", r[j]);
-    return (r);
+	printf("%s", r);
+	return (r);
 }
 
 int	main(void)
 {
-	int		size;
-	char    str1[] = "Hello";
-	char    str2[] = "Salut";
-	char    str3[] = "Ola";
-	char    str4[] = "Bonjour";
+	char	str1[] = "Hello";
+	char	str2[] = "Salut";
+	char	str3[] = "Ola";
+	char	str4[] = "Bonjour";
 	char	*strs[] = {str1, str2, str3, str4};
 	char	*sep;
 	char    *r;
-	int i;
-	int j;
+	int		size;
 
-    i = 0;
-    size = 0;
 	sep = ", ";
-    while (*strs[i] != '\0')
-    {
-        j = 0;
-        while (strs[i][j] != '\0')
-        {
-            j++;
-        }
-        size = size + j;
-        i++;
-    }
-	r = ft_strjoin(size, &*strs, sep);
+	size = 0;
+	while (*strs[])
+		size++;	       
+	r = ft_strjoin(size, strs, sep);
 	free(r);
 	return (0);
 }
