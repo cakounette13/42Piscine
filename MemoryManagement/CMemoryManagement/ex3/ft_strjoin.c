@@ -6,36 +6,36 @@
 /*   By: dcarine <dcarine@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 14:36:59 by dcarine           #+#    #+#             */
-/*   Updated: 2026/09/14 19:09:09 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/09/15 11:58:52 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+//#include <stdio.h>
 
-int	ft_size_total(char **strs, char *sep)
+int	ft_size_total(int size, char **strs, char *sep)
 {
 	int	i;
 	int	j;
-	int	size;
+	int	size_total;
 
-	size = 0;
 	i = 0;
-	while (*strs[i] != '\0')
+	size_total = 0;
+	while (i < size)
 	{
 		j = 0;
 		while (strs[i][j] != '\0')
 		{
-			size++;
+			size_total++;
 			j++;
 		}
 		i++;
 	}
-	j = 0;
-	while (sep[j] != '\0')
-		j++;
-	size += (j * (i - 1));
-	return (size);
+	i = 0;
+	while (sep[i] != '\0')
+		i++;
+	size_total += (i * (size - 1));
+	return (size_total);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
@@ -45,7 +45,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		j;
 	int		k;
 
-	r = malloc(sizeof(char) * (size + 1));
+	r = malloc(sizeof(char) * (ft_size_total(size, strs, sep) + 1));
 	if (r == NULL)
 		*strs = NULL;
 	i = 0;
@@ -55,23 +55,18 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	{
 		j = 0;
 		while (strs[i][j] != '\0')
+			r[k++] = strs[i][j++];
+		j = 0;
+		if (i != (size - 1))
 		{
-			r[k] = strs[i][j];
-			j++;
-			k++;
-		}
-		while (sep[j])
-		{
-			r[k] = sep[j];
-			j++;
-			k++;
+			while (sep[j])
+				r[k++] = sep[j++];
 		}
 		i++;
 	}
-	printf("%s", r);
 	return (r);
 }
-
+/*
 int	main(void)
 {
 	char	str1[] = "Hello";
@@ -84,10 +79,9 @@ int	main(void)
 	int		size;
 
 	sep = ", ";
-	size = 0;
-	while (*strs[])
-		size++;	       
+	size = 4;
 	r = ft_strjoin(size, strs, sep);
+	printf("%s", r);
 	free(r);
 	return (0);
-}
+}*/
