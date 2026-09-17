@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcarine <dcarine@learner.42.tech>          +#+  +:+       +#+        */
+/*   By: dcarine <dcarine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 12:18:30 by dcarine           #+#    #+#             */
-/*   Updated: 2026/09/11 10:39:15 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/09/17 11:14:49 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*ft_strdup(char *src)
 		i++;
 	}
 	new_string = malloc((i + 1) * sizeof(*src));
-	if (new_string == NULL)
-		return(NULL);
+	if (new_string == NULL || src == NULL)
+		return (NULL);
 	i = 0;
 	while (src[i])
 	{
@@ -37,7 +37,7 @@ char	*ft_strdup(char *src)
 
 int	main(void)
 {
-	char	src[] = "J'aime le chocolat";
+	char	src[] = "";
 	char	*str2;
 
 	str2 = ft_strdup(src);
