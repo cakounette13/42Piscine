@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
+/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-10-09 16:21:28 by Delrieux Carine   #+#    #+#             */
 /*   Updated: 2026-10-09 16:21:28 by Delrieux Carine  ###   ########.fr       */
