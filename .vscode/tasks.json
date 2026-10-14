@@ -9,6 +9,7 @@
                 "-Wall",
                 "-Wextra",
                 "-Werror",
+                "-DCheckDefine",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
