@@ -26,9 +26,9 @@ int main(int argc, char **argv)
 {
     (void)argv;
 
-    if (ft_is_even(argc-1) == TRUE) // Erreur sur cette partie de code (argc-1) ça donne toujours 1 mettre argv[1] à la place ppour que cela fonctionne
-        ft_putstr(EVEN_MSG); // nbr pair
+    if (ft_is_even(argc-1) == TRUE)
+        ft_putstr(EVEN_MSG); // nbr pair d'arguments
     else
-        ft_putstr(ODD_MSG); // nbr impair
+        ft_putstr(ODD_MSG); // nbr impair d'arguments
     return (SUCCESS);
 }

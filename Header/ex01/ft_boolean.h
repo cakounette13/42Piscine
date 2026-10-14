@@ -26,6 +26,6 @@
 // Définitions de types
 typedef int t_bool;
 
-#define EVEN(n) (((n) % 2) == 0)
+#define EVEN(n) ((n) % 2)
 
 #endif
