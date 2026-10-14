@@ -12,6 +12,9 @@
 #ifndef FT_STOCK_STR_H
 #define FT_STOCK_STR_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct s_stock_str
 {
     int size;
