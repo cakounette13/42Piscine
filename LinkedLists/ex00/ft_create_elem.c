@@ -27,5 +27,6 @@ int main(void)
 {
     char *data = "bonjour";
     ft_create_elem(data);
+    free(ft_create_elem(data));
     return (0);
 }
