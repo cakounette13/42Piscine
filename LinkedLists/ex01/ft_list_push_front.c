@@ -28,44 +28,40 @@ t_list  *ft_create_elem(void *data)
 
 void    ft_list_push_front(t_list **begin_list, void *data)
 {
-    t_list *new_data = data;
+    t_list *new_data;
     
+    new_data = ft_create_elem(data);
     if (new_data == NULL)
         return ;
     new_data->next = *begin_list;
     *begin_list = new_data;
 }
 
-void free_malloc(t_list **begin_list, void *data)
+void free_malloc(t_list **begin_list)
 {
-    t_list *list_data = data;
-    if (*begin_list == NULL)
+    t_list *current;
+    t_list *next;
+
+    if (begin_list == NULL)
     {
-        exit(EXIT_FAILURE);
+        return ;
     }
-    if (*begin_list != NULL)
+    current = *begin_list;
+    while (current != NULL)
     {
-        t_list *ma_liste = *begin_list;
-        *begin_list = list_data->next;
-        free(ma_liste);
+        next = current->next;
+        free(current);
+        current = next;
     }
+    *begin_list = NULL;
 }
 
 int main(void)
 {
-    // Initialisation de la liste à vide
 	t_list *ma_liste = NULL;
-	// Création de données allouées dynamiquement	
-    char *str1 = "Troisieme";
-	char *str2 = "Deuxieme";
-	char *str3 = "Premier";
-    // Création des nœuds et ajout dans la liste
-	// On ajoute au début de la liste chaque element
-	ft_list_push_front(&ma_liste, ft_create_elem(str1));
-	ft_list_push_front(&ma_liste, ft_create_elem(str2));
-	ft_list_push_front(&ma_liste, ft_create_elem(str3));
-    free_malloc(&ma_liste, &str1);
-    free_malloc(&ma_liste, &str2);
-    free_malloc(&ma_liste, &str3);
+	ft_list_push_front(&ma_liste, "troizième");
+	ft_list_push_front(&ma_liste, "deuxième");
+	ft_list_push_front(&ma_liste, "premier");
+    free_malloc(&ma_liste);
     return (0);
 }
