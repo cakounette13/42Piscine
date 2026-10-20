@@ -43,6 +43,14 @@ int main(void)
 
     ma_liste = ft_create_elem("bonjour");
     ft_list_push_back(&ma_liste, "salut");
+    ft_list_push_back(&ma_liste, "Hello");
+    current = ma_liste;
+    // Affichage des éléments
+    while (current)
+    {
+        printf("%s\n", (char *)current->data);
+        current = current->next;
+    }
     current = ma_liste;
     while (current != NULL)
     {
