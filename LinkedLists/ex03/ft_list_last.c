@@ -11,71 +11,32 @@
 /* ************************************************************************** */
 #include "ft_list.h"
 
-t_list  *ft_create_elem(void *data)
-{
-    t_list  *l;
-
-    l = (t_list *)malloc(sizeof(t_list));
-    if (l == NULL)
-        return (NULL);
-    l->data = data;
-    l->next = NULL;
-    return (l);
-}
-
-void    ft_list_push_front(t_list **begin_list, void *data)
-{
-    t_list *new_data;
-    
-    new_data = ft_create_elem(data);
-    if (new_data == NULL)
-        return ;
-    new_data->next = *begin_list;
-    *begin_list = new_data;
-}
-
-void free_malloc(t_list **begin_list)
-{
-    t_list *current;
-    t_list *next;
-
-    if (begin_list == NULL)
-    {
-        return ;
-    }
-    current = *begin_list;
-    while (current != NULL)
-    {
-        next = current->next;
-        free(current);
-        current = next;
-    }
-    *begin_list = NULL;
-}
-
 t_list  *ft_list_last(t_list *begin_list)
 {
-    t_list *current = begin_list;
-
-    if (current == NULL)
+    if (begin_list == NULL)
         return (NULL) ;
-    while (current->next != NULL)
+    while (begin_list->next != NULL)
     {
-        current = current->next;
+        begin_list = begin_list->next;
     }
-    return (current);
+    return (begin_list);
 }
 
-int main()
+    int main()
 {
-    t_list *ma_liste = NULL;
-    t_list *last;
-
-	ft_list_push_front(&ma_liste, "troizieme");
-	ft_list_push_front(&ma_liste, "deuxieme");
-	ft_list_push_front(&ma_liste, "premier");
-    last = ft_list_last(ma_liste);
-    printf("%s\n", (char *)last->data);
-    free_malloc(&ma_liste);
+    t_list word1;
+    t_list word2;
+    t_list word3;
+    t_list *begin_list;
+    
+    word1.data = "Salut ";
+    word1.next = &word2;
+    word2.data = "les ";
+    word2.next = &word3;
+    word3.data = "copains";
+    word3.next = NULL;
+    begin_list = &word1;
+    t_list *last_word = ft_list_last(begin_list);
+	printf("%s\n", (char *)last_word->data);
     return (0);
 }
