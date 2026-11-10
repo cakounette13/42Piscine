@@ -1,12 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:44:40 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:44:40 by Delrieux Carine  ###   ########.fr       */
+/*   Created: 2026-11-06 18:45:06 by Delrieux Carine   #+#    #+#             */
+/*   Updated: 2026-11-06 18:45:06 by Delrieux Carine  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
+{
+    
+}

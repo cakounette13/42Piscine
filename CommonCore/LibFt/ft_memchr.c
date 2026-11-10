@@ -1,12 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:44:49 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:44:49 by Delrieux Carine  ###   ########.fr       */
+/*   Created: 2026-11-06 18:44:07 by Delrieux Carine   #+#    #+#             */
+/*   Updated: 2026-11-06 18:44:07 by Delrieux Carine  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+    
+}

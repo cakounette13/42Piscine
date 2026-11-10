@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:06:03 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:06:03 by Delrieux Carine  ###   ########.fr       */
+/*   Created: 2026-11-06 18:45:29 by Delrieux Carine   #+#    #+#             */
+/*   Updated: 2026-11-06 18:45:29 by Delrieux Carine  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= '0' && str[i] <= '9')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+    
 }

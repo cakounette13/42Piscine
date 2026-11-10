@@ -16,3 +16,7 @@ Cette fonction permet de copier un bloc de mémoire spécifié par le paramètre
 
 En cas de chevauchement des deux blocs de mémoire (source et destination) le comportement de la fonction memcpy n'est pas garanti. Dans ce cas, veuillez préférer l'utilisation de la fonction memmove. 
 */
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+    
+}

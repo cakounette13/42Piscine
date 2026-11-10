@@ -1,12 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:44:20 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:44:20 by Delrieux Carine  ###   ########.fr       */
+/*   Created: 2026-11-06 18:45:40 by Delrieux Carine   #+#    #+#             */
+/*   Updated: 2026-11-06 18:45:40 by Delrieux Carine  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+    
+}

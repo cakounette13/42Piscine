@@ -12,9 +12,8 @@
 #include "libft.h"
 
 /*
-Cette fonction permet de tester si un caractère est alphabétique ou non. Un caractère sera considéré comme alphabétique s'il est de lettres minuscules ou de lettres majuscules. Rappel : ces fonctions travaillent sur des valeurs représentables sous forme d'unsigned char (ou EOF) et leur comportement dépend de la localisation courante. Dans la localisation "C", les lettres accentuées ne sont pas considérées comme des caractères alphabétiques. 
+Cette fonction permet de tester si un caractère est alphabétique ou non. Un caractère sera considéré comme alphabétique s'il est de lettres minuscules ou de lettres majuscules.
 */
-
 int	ft_isalpha(char *str)
 {
 	int	i;
@@ -29,3 +28,10 @@ int	ft_isalpha(char *str)
 	}
 	return (1);
 }
+/*
+int	main(void)
+{
+	char	str[] = "Bonjoutousxx1";
+	printf("%d", ft_isalpha(str));
+	return (0);	
+}*/

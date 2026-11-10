@@ -1,12 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:45:29 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:45:29 by Delrieux Carine  ###   ########.fr       */
+/*   Created: 2026-11-06 18:45:13 by Delrieux Carine   #+#    #+#             */
+/*   Updated: 2026-11-06 18:45:13 by Delrieux Carine  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+    
+}

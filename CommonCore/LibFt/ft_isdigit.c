@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:08:21 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:08:21 by Delrieux Carine  ###   ########.fr       */
+/*   Created: 2026-11-06 18:06:03 by Delrieux Carine   #+#    #+#             */
+/*   Updated: 2026-11-06 18:06:03 by Delrieux Carine  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 /*
-Cette fonction permet de convertir une lettre majuscule en lettre minuscule. Rappel : cette conversion dépend de la localisation courante. Dans la localisation "C", seules les lettres non accentuées de l'alphabet latin sont transformées. 
+	Elle vérifie si le caractère passé en paramètre est un chiffre décimal compris entre '0' et '9'
 */
-char	*ft_tolower(char *str)
+int	ft_isdigit(char *str)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 65 && str[i] <= 90)
-		{
-			str[i] = str[i] + 32;
+		if (str[i] >= '0' && str[i] <= '9')
 			i++;
-		}
 		else
-		{
-			i++;
-		}
+			return (0);
 	}
-	return (str);
+	return (1);
 }
+/*
+int	main(void)
+{
+	char	str[] = "15";
+	printf("%d", ft_isdigit(str));
+	return (0);
+}*/
