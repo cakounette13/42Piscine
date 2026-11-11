@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+    Cette fonction permet de remplir une zone mémoire, identifiée par son adresse et sa taille, avec une valeur précise.
+*/
 void	*ft_memset(void *str, int value, size_t n)
 {
-    
+
 }

@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+	Cette fonction permet de dupliquer une chaîne de caractères.
+*/
 char	*ft_strdup(char *src)
 {
 	char	*new_string;
@@ -32,3 +34,10 @@ char	*ft_strdup(char *src)
 	}
 	return (new_string);
 }
+/*
+int	main(void)
+{
+	char	str[] = "ae246(*& ^%";
+	printf("%s", ft_strdup(str));
+	return (0);	
+}*/

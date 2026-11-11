@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+    Cette fonction recherche la première occurrence du caractère passé en second paramètre dans la chaîne de caractères spécifiée via le premier paramètre.
+*/
 char	*ft_strchr(const char *str, int c)
 {
     

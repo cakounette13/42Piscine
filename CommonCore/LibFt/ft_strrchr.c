@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
 /*
  Cette fonction recherche la dernière occurrence du caractère passé en second paramètre dans la chaîne de caractères spécifiée via le premier paramètre.
 */
 char	*ft_strrchr(const char *str, int c)
 {
-    
+
 }

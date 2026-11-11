@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+	La fonction teste si une valeur entière correspond à un caractère ASCII sur 7 bits.
+*/
 int	ft_isascii(char *str)
 {
 	int	i;
@@ -18,17 +20,17 @@ int	ft_isascii(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= 0) && (str[i] <= 127))
+		if (str[i] >= 0 && str[i] <= 126)
 			i++;
 		else
 			return (0);
 	}
 	return (1);
 }
-
+/*
 int	main(void)
 {
-	char	str[] = "Bonjoutousxx1";
+	char	str[] = "df dhgsfA9";
 	printf("%d", ft_isascii(str));
 	return (0);	
-}
+}*/

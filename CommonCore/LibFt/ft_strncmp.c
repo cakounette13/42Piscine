@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+    Cette fonction permet de comparer deux chaînes de caractères et de savoir si la première est inférieure, égale ou supérieure à la seconde. Cette comparaison sera faite dans l'ordre lexicographique (et donc, en tenant compte des valeurs ASCII des différents caractères comparés). Néanmoins la comparaison se fera au maximum sur les length premiers caractères.
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    
+
 }
