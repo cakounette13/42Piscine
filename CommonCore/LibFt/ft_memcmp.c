@@ -15,19 +15,29 @@
 */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {   
-    int length1;
+    unsigned char *length1;
+    unsigned char *length2;
+    size_t i;
 
-    length1 = sizeof((char *)s1);
-    length2
+    i = 0;
+    length1 = (unsigned char *)s1;
+    length2 = (unsigned char *)s2;
+    while (i < n)
+    {
+        if (length1[i] != length2[i])
+            return (length1[i] - length2[i]);
+        i++;
+    }    
+    return (0);          
 }
-
+/*
 int main(void)
 {
-    char str1[] = "Chocolat";
-    char str2[] = "Bonbon";
+    char str1[] = "Chocola5!bxfg";
+    char str2[] = "Chocolat";
     size_t n;
 
-    n = 15;
-    ft_memcmp(str1, str2, n);
+    n = 9;
+    printf("%d", ft_memcmp(str1, str2, n));
     return (0);
-} 
+}*/

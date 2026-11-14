@@ -1,32 +1,37 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Makefile                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 17:16:07 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 17:16:07 by Delrieux Carine  ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-/* 
-Fonctionnement d'un Makefile
-	cible : fichier source
-		commande
-*/
+#	Fonctionnement d'un Makefile
+#		cible : fichier source
+#			commande
 
-prog : main.o
-	gcc -o prog main.o
+# Variables
+CC = gcc -Wall -Werror -Wextra
 
-main.o : main.c
-	gcc -o main.o -c main.cible
+NAME = libft.a
 
-NAME
+SRCS = $(wildcard *.c)
 
-all
+OBJS = $(SRCS:.c=.o)
 
-clean
+# Traitements
+# Appel toutes les cibles pour créer la librairie statique en une seule commande
+all: $(NAME)
 
-fclean
+# Génère la librairie statique à partir des fichiers .o
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-re
+# Génère les fichiers .o en compilant les fichiers .c
+$(OBJS): $(SRCS)
+	$(CC) $(SRCS) -o $(OBJS)
+
+# Supprime tous les fichiers .o existants
+clean:
+	rm -f $(OBJS)
+
+# Supprime tous les fichiers .o + librairie statique existante
+fclean: clean
+	rm -f $(NAME)
+
+# Supprime les fichiers .o, le librairie et recré le librairie statique
+re: fclean all
+
+.PHONY: all clean fclean re
