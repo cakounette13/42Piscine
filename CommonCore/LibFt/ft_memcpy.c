@@ -18,5 +18,29 @@
 */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-
+    unsigned char   *result;
+    unsigned char   *str;
+    size_t  i;
+    
+    i = 0;
+    result = (unsigned char *)dest;
+    str = (unsigned char *)src;
+    if (result == NULL || str == NULL)
+        return (NULL);
+    while (i < n)
+    {
+        result[i] = str[i];
+        i++;
+    }
+    return (result);
 }
+/*
+int main(void)
+{
+    size_t  n = 8;
+    char   dest[n];
+    char src[] = "piscine";
+
+    ft_memcpy(dest, src, n);
+    return (0);
+}*/

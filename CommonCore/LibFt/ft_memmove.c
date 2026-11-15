@@ -17,5 +17,31 @@
 */
 void	*ft_memmove(void *dest, const void *src, size_t length)
 {
+    unsigned char   *result;
+    unsigned char   *str;
+    unsigned char   temp[length];
+    size_t  i;
+    
+    i = 0;
+    result = (unsigned char *)dest;
+    str = (unsigned char *)src;
+    if (result == NULL || str == NULL)
+        return (NULL);
+    while (i < length)
+    {
+        temp[i] = str[i];
+        result[i] = temp[i];
+        i++;
+    }
+    return (result);
+}
 
+int main(void)
+{
+    size_t  lenght = 4;
+    char   dest[lenght];
+    char src[] = "piscine";
+
+    ft_memmove(dest, src, lenght);
+    return (0);
 }

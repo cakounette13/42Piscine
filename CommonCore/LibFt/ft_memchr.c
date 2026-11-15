@@ -30,7 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
     }
     return (NULL);
 }
-/*
+
 int main(void)
 {
     char    string[] = "Bonjour les petits";
@@ -45,4 +45,4 @@ int main(void)
     else
         printf("Character not found\n");
     return (0);
-}*/
+}

@@ -11,9 +11,32 @@
 /* ************************************************************************** */
 #include "libft.h"
 /*
-    Cette fonction permet de remplir une zone mémoire, identifiée par son adresse et sa taille, avec une valeur précise.
+    La fonction memset() remplit les n premiers octets de la zone mémoire pointée par *str avec l'octet value.
 */
 void	*ft_memset(void *str, int value, size_t n)
 {
+    size_t i;
+    unsigned char    *s;
 
+    i = 0;
+    s = (unsigned char *)str;
+    if (s == NULL)
+        return NULL;    
+    while (i < n)
+    {
+        s[i] = value;
+        i++;
+    }
+    return (s);
+}
+
+int main(void)
+{
+    size_t n = 3;
+	char str[] = "bonjour";
+    int value = 2;
+
+	ft_memset(str, value, n);
+	printf("La chaine : %s\n", str);
+	return (0);
 }
