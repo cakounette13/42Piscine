@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
+/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-06 18:43:04 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:43:04 by Delrieux Carine  ###   ########.fr       */
+/*   Updated: 2026/11/16 16:32:36 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 /*
-La  fonction bzero() met à 0 les n premiers octets du bloc pointé par s
-       (octets contenant « \0 »).
+La  fonction ft_bzero() met à 0 les n premiers octets du bloc pointé par s
+	   (octets contenant « \0 »).
 */
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    size_t i;
-    char    *str;
+	char	*str;
+	size_t	i;
 
-    i = 0;
-    str = (char *)s;
-    if (str == NULL)
-        return ;    
-    while (i < n)
-    {
-        str[i] = 0;
-        i++;
-    }
+	i = 0;
+	str = (char *)s;
+	if (str == NULL)
+		return ;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }
 /*
 int main(void)
 {
-    int n = 7;
+	int n = 7;
 	char s[] = "bonjour";
 
 	printf("La chaine : %s\n", s);

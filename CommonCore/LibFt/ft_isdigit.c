@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
+/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-06 18:06:03 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:06:03 by Delrieux Carine  ###   ########.fr       */
+/*   Updated: 2026/11/16 14:56:29 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 /*
-	Elle vérifie si le caractère passé en paramètre est un chiffre décimal compris entre '0' et '9'
+	Elle vérifie si le caractère passé en paramètre est un chiffre décimal 
+	compris entre '0' et '9'
 */
 int	ft_isdigit(char *str)
 {

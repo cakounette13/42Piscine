@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
+/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-06 17:57:44 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 17:57:44 by Delrieux Carine  ###   ########.fr       */
+/*   Updated: 2026/11/16 14:56:02 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 /*
-Cette fonction permet de tester si un caractère est alphabétique ou non. Un caractère sera considéré comme alphabétique s'il est de lettres minuscules ou de lettres majuscules.
+Cette fonction permet de tester si un caractère est alphabétique ou non. Un 
+caractère sera considéré comme alphabétique s'il est de lettres minuscules ou 
+de lettres majuscules.
 */
 int	ft_isalpha(char *str)
 {

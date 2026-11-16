@@ -3,44 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+        */
+/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-06 18:44:26 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026-11-06 18:44:26 by Delrieux Carine  ###   ########.fr       */
+/*   Updated: 2026/11/16 15:01:35 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 /*
-    Cette fonction permet de copier un bloc de mémoire spécifié par le paramètre source, et dont la taille est spécifiée via le paramètre size, dans un nouvel emplacement désigné par le paramètre destination. Il est bien entendu qu'il est de votre responsabilité d'allouer suffisamment de mémoire pour le bloc de destination afin qu'il puisse contenir toutes les données.
-
-    En cas de chevauchement des deux blocs de mémoire (source et destination) le comportement de la fonction memcpy n'est pas garanti. Dans ce cas, veuillez préférer l'utilisation de la fonction memmove. 
+	Cette fonction permet de copier un bloc de mémoire spécifié par le paramètre
+	source, et dont la taille est spécifiée via le paramètre size, dans un nouvel
+	emplacement désigné par le paramètre destination. Il est bien entendu qu'il 
+	est de votre responsabilité d'allouer suffisamment de mémoire pour le bloc de
+	destination afin qu'il puisse contenir toutes les données.
+	En cas de chevauchement des deux blocs de mémoire (source et destination) le
+	comportement de la fonction memcpy n'est pas garanti. Dans ce cas, veuillez 
+	préférer l'utilisation de la fonction memmove. 
 */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char   *result;
-    unsigned char   *str;
-    size_t  i;
-    
-    i = 0;
-    result = (unsigned char *)dest;
-    str = (unsigned char *)src;
-    if (result == NULL || str == NULL)
-        return (NULL);
-    while (i < n)
-    {
-        result[i] = str[i];
-        i++;
-    }
-    return (result);
+	unsigned char	*result;
+	unsigned char	*str;
+	size_t			i;
+
+	i = 0;
+	result = (unsigned char *)dest;
+	str = (unsigned char *)src;
+	if (result == NULL || str == NULL)
+		return (NULL);
+	while (i < n)
+	{
+		result[i] = str[i];
+		i++;
+	}
+	return (result);
 }
 /*
 int main(void)
 {
-    size_t  n = 8;
-    char   dest[n];
-    char src[] = "piscine";
+	size_t  n = 8;
+	char   dest[n];
+	char src[] = "piscine";
 
-    ft_memcpy(dest, src, n);
-    return (0);
+	ft_memcpy(dest, src, n);
+	return (0);
 }*/
