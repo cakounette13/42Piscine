@@ -6,13 +6,12 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-17 17:00:27 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/17 19:46:02 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/17 23:10:35 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <bsd/string.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
