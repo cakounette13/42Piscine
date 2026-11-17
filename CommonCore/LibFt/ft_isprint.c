@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:11:47 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 14:56:38 by dcarine          ###   ########.fr       */
+/*   Created: 2026-11-17 15:17:44 by dcarine           #+#    #+#             */
+/*   Updated: 2026-11-17 15:17:44 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-
+#include "libft.h"	
 /*
 	Elle vérifie si un caractère est un caractère imprimable.
 */

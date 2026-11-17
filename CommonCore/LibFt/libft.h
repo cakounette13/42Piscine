@@ -3,27 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcarine <dcarine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/16 15:13:42 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/16 16:51:09 by dcarine          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 17:30:54 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 15:12:14 by dcarine          ###   ########.fr       */
+/*   Created: 2026-11-17 17:00:27 by dcarine           #+#    #+#             */
+/*   Updated: 2026/11/17 19:46:02 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <bsd/string.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -36,7 +25,7 @@ int		ft_isalpha(char *str);
 int		ft_isascii(char *str);
 int		ft_isdigit(char *str);
 int		ft_isprint(char *str);
-//void	*ft_memchr(const void *s, int c, size_t n);
+// void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t length);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:45:40 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 15:04:40 by dcarine          ###   ########.fr       */
+/*   Created: 2026/11/17 16:33:28 by dcarine           #+#    #+#             */
+/*   Updated: 2026/11/17 19:40:58 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

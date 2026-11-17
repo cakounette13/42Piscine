@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:44:20 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 15:00:09 by dcarine          ###   ########.fr       */
+/*   Created: 2026-11-17 15:18:55 by dcarine           #+#    #+#             */
+/*   Updated: 2026-11-17 15:18:55 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

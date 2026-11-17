@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:43:04 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 16:32:36 by dcarine          ###   ########.fr       */
+/*   Created: 2026-11-17 15:16:26 by dcarine           #+#    #+#             */
+/*   Updated: 2026-11-17 15:16:26 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*
-La  fonction ft_bzero() met à 0 les n premiers octets du bloc pointé par s
+/*La  fonction ft_bzero() met à 0 les n premiers octets du bloc pointé par s
 	   (octets contenant « \0 »).
 */
 void	ft_bzero(void *s, size_t n)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:44:07 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 15:13:08 by dcarine          ###   ########.fr       */
+/*   Created: 2026-11-17 15:18:40 by dcarine           #+#    #+#             */
+/*   Updated: 2026-11-17 15:18:40 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

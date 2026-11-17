@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:44:40 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 16:50:41 by dcarine          ###   ########.fr       */
+/*   Created: 2026-11-17 17:40:48 by dcarine           #+#    #+#             */
+/*   Updated: 2026-11-17 17:40:48 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 /*
-	La fonction memset() remplit les n premiers octets de la zone mémoire 
+	La fonction memset() remplit les n premiers octets de la zone mémoire
 	pointée par *str avec l'octet value.
 */
 void	*ft_memset(void *str, int value, size_t n)
@@ -37,7 +37,7 @@ int	main(void)
 	char	str[] = "bonjour";
 	int		value = '2';
 	size_t	n = 3;
-	memset(str, value, n);
+	ft_memset(str, value, n);
 	printf("La chaine : %s\n", str);
 	return (0);
 }*/

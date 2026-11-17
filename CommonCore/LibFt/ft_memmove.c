@@ -3,54 +3,59 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Delrieux Carine <Delrieux Carine@student.42.fr>  #+#  +:+       +#+  */
+/*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-06 18:44:34 by Delrieux Carine   #+#    #+#             */
-/*   Updated: 2026/11/16 17:52:05 by dcarine          ###   ########.fr       */
+/*   Created: 2026/11/17 19:02:08 by dcarine           #+#    #+#             */
+/*   Updated: 2026/11/17 19:34:39 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 /*
 	Cette fonction permet de copier un bloc de mémoire spécifié par le paramètre
-	source dans un nouvel emplacement désigné par le paramètre destination. 
-	On peut donc dire que cette fonction est proche de la fonction memcpy. 
-	Néanmoins, la différence réside dans le fait que la fonction memmove accepte 
+	source dans un nouvel emplacement désigné par le paramètre destination.
+	On peut donc dire que cette fonction est proche de la fonction memcpy.
+	Néanmoins, la différence réside dans le fait que la fonction memmove accepte
 	que les deux zones de mémoire puissent se chevaucher.
 	En cas de chevauchement, la copie se passe comme si les octets de la zone
-	source étaient d'abord copiés dans une zone temporaire, qui ne chevauche 
-	aucune des deux zones pointées par source et destination, et les octets sont 
+	source étaient d'abord copiés dans une zone temporaire, qui ne chevauche
+	aucune des deux zones pointées par source et destination, et les octets sont
 	ensuite copiés de la zone temporaire vers la zone de destination.
 */
-// void	*ft_memmove(void *dest, const void *src, size_t length)
-// {
-// 	unsigned char	*result;
-// 	unsigned char	*str;
-// 	unsigned char	temp[length];
-// 	size_t			i;
+void	*ft_memmove(void *dest, const void *src, size_t length)
+{
+	char	*result;
+	char	*str;
 
-// 	i = 0;
-// 	result = (unsigned char *)dest;
-// 	str = (unsigned char *)src;
-// 	if (result == NULL || str == NULL)
-// 		return (NULL);
-// 	while (i < length)
-// 	{
-// 		temp[i] = str[i];
-// 		result[i] = temp[i];
-// 		i++;
-// 	}
-// 	return (result);
-// }
-
+	result = (char *)dest;
+	str = (char *)src;
+	if (result == NULL || str == NULL)
+		return (NULL);
+	if (dest <= src)
+	{
+		while (length--)
+		{
+			*result++ = *str++;
+		}
+	}
+	else if (dest > src)
+	{
+		result += length - 1;
+		str += length - 1;
+		while (length--)
+		{
+			*result-- = *str--;
+		}
+	}
+	return (dest);
+}
+/*
 int	main(void)
 {
-	size_t			lenght = 5;
-	
-	char	*src = "piscine";
-	char *dest = src + 1;
-	
-	memmove(dest, src, lenght);
-	printf("La chaine : %s\n", src);
-	printf("Destination : %s\n", dest);
+	char	src[] = "piscine";
+
+	printf("La chaine src : %s\n", src);
+	ft_memmove(src + 2, src, 5);
+	printf("La chaine dest : %s\n", src);
 	return (0);
-}
+}*/
