@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-17 15:15:55 by dcarine           #+#    #+#             */
-/*   Updated: 2026-11-17 15:15:55 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/18 14:15:47 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,7 +14,7 @@
 	Elle convertit une chaîne de caractères en entier (int) 
 	en gérant les espaces initiaux, les signes + ou -, puis la suite de chiffres.
 */
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;

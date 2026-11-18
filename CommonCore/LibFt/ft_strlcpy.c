@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 16:29:38 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/17 23:42:01 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/18 14:51:48 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,27 +16,27 @@
 	destination. Le résultat est toujours terminé par '\0' si la taille
 	disponible est strictement positive.
 */
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstSize)
 {
 	size_t	i;
 
 	i = 0;
 	while (src[i] != '\0')
 		i++;
-	if (i < size - 1)
+	if (i < dstSize - 1)
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	return (size);
+	return (dstSize);
 }
-
+/*
 int	main(void)
 {
-	char	src[] = "salut";
-	char	dest[3];
-	
-	printf("La chaine src : %s\n", src);
-	ft_strlcpy(dest, src, 7);
-	printf("La chaine dest : %s\n", dest);
-}
+	char	buffer[8];
+	size_t	needed = strlcpy(buffer, "KooR.fr", sizeof buffer);
+
+	printf("%s\n", buffer);
+	printf("taille source : %zu\n", needed);
+	return (0);
+}*/

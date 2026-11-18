@@ -6,14 +6,14 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 16:32:57 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/17 19:40:26 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/18 14:28:03 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 /*
 	Cette fonction permet de dupliquer une chaîne de caractères.
 */
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*new_string;
 	int		i;
