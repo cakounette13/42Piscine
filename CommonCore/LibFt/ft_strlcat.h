@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 16:33:03 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/18 14:25:38 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/19 17:35:42 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,6 +16,6 @@
 	buffer de destination. Elle retourne la taille qui aurait été nécessaire
 	pour stocker le résultat complet.
 */
-size_t	ft_strlcat(char *restrict dest, const char *src, size_t dsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t dsize)
 {
 }
