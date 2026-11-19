@@ -6,16 +6,16 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-17 17:00:27 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/18 17:09:40 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/19 18:04:42 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
-# include <stddef.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -32,11 +32,11 @@ void	*ft_memmove(void *dest, const void *src, size_t length);
 void	*ft_memset(void *str, int value, size_t n);
 char	*ft_strchr(char *str, int c);
 char	*ft_strdup(const char *src);
-// size_t	ft_strlcat(char *dest, const char *src, size_t dsize);
+size_t	ft_strlcat(char *dest, const char *src, size_t dsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstSize);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t length);
-//char	*ft_strnstr(const char *big, const char *little, size_t len);
+// char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
