@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-17 17:00:27 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/19 23:30:15 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/20 14:51:04 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -19,7 +19,7 @@
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-// void	*ft_calloc(size_t count, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
