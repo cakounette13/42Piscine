@@ -20,18 +20,17 @@ char	*ft_strdup(const char *src)
 
 	i = 0;
 	while (src[i] != '\0')
-	{
 		i++;
-	}
-	new_string = malloc((i + 1) * sizeof(*src));
-	if (new_string == NULL || src == NULL)
-		return (NULL);
+	new_string = malloc(sizeof(char) * (i + 1));
+	if (new_string == NULL)
+        return (NULL);
 	i = 0;
-	while (src[i])
+	while (src[i] != '\0')
 	{
 		new_string[i] = src[i];
 		i++;
 	}
+	new_string[i] = '\0';
 	return (new_string);
 }
 /*
@@ -39,5 +38,6 @@ int	main(void)
 {
 	char	str[] = "ae246(*& ^%";
 	printf("%s", ft_strdup(str));
+	free(str);
 	return (0);	
 }*/

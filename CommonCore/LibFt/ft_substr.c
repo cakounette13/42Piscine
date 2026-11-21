@@ -16,7 +16,7 @@ start: The start index of the substring in the string
 ’s’.
 len: The maximum length of the substring.
 */
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char *ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*ss;
 	size_t	len_s;
@@ -24,20 +24,21 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	if (s == NULL)
-		return NULL;
+		return (0);
 	len_s = ft_strlen(s);
-	if (start + 1 > len_s)
+	if (start > len_s)
 		return (0);
 	if (len > len_s - start)
 		len = len_s - start;
 	ss = malloc(sizeof(char) * (len + 1));
 	if (ss == NULL)
-		return (NULL);
-	while (i < len && s[start + i])
+		return (0);
+	while (i < (int)len && s[start + i] != '\0')
 	{
 		ss[i] = s[start + i];
 		i++;
 	}
+	ss[i] = '\0';
 	return (ss);
 }
 /*

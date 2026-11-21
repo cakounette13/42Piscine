@@ -9,7 +9,7 @@
 /*   Updated: 2026/11/20 14:49:49 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-// #include "libft.h"
+#include "libft.h"
 
 // /*
 // 	Cette fonction alloue un bloc de mémoire en initialisant tous ces octets
@@ -41,7 +41,7 @@
 // 	}
 // 	return (NULL);
 // }
-// /*
+// 
 // int	main(void)
 // {
 // 	size_t	count;
@@ -52,4 +52,16 @@
 // 	size = 5;
 // 	result = ft_calloc(count, size);
 // 	return (0);
-// }*/
+// }
+void    *ft_calloc(size_t count, size_t size)
+{
+	void	*ptr;
+
+	if (count != 0 && size > SIZE_MAX / count)
+		return (NULL);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
+}
