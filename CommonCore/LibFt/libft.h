@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-17 17:00:27 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/20 14:51:04 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/22 15:22:56 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -31,15 +31,18 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t length);
 void	*ft_memset(void *str, int value, size_t n);
+char	**ft_split(char const *s, char c);
 char	*ft_strchr(char *str, int c);
 char	*ft_strdup(const char *src);
+char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dest, const char *src, size_t dsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstSize);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t length);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);
-char    *ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
