@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/22 15:21:49 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/22 19:37:15 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/23 18:56:07 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ void	free_all(char **tab, int n)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t		i;
-	size_t		j;
-	size_t		k;
-	char		**split;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	char	**split;
 
 	split = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!s || !split)
