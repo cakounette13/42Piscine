@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 11:57:13 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/24 12:54:37 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/24 14:19:42 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,7 +22,7 @@ int	main(void)
 {
 	int	fd;
 
-	fd = open("text.txt", O_CREAT || O_RDWR);
+	fd = open("text.txt", O_CREAT | O_RDWR);
 	ft_putchar_fd("A", fd);
 	close(fd);
 	return (0);
