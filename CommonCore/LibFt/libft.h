@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-17 17:00:27 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/24 16:02:16 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/24 17:25:17 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -54,5 +54,13 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;	
+}				t_list;
+
+t_list	*ft_lstnew(void *content);
 
 #endif
