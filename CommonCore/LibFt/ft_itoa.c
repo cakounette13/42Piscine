@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 19:02:22 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/25 17:02:58 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/25 18:41:46 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -26,6 +26,16 @@ static int	ft_lengthnbr(long nbr)
 	return (length);
 }
 
+static long	ft_nbrneg(long nbr, char *str)
+{
+	if (nbr < 0)
+	{
+		str[0] = '-';
+		nbr = -nbr;
+	}
+	return (nbr);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -38,11 +48,7 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[length] = '\0';
-	if (nbr < 0)
-	{
-		str[0] = '-';
-		nbr = -nbr;
-	}
+	nbr = ft_nbrneg(nbr, str);
 	if (nbr == 0)
 		str[0] = '0';
 	else
