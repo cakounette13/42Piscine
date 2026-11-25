@@ -6,13 +6,13 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/22 13:52:46 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/22 15:18:20 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/25 17:05:34 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_len_set(char c, const char *set)
+static int	ft_len_set(char c, const char *set)
 {
 	int		i;
 

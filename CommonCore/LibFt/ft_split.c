@@ -6,13 +6,13 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/22 15:21:49 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/23 18:56:07 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/25 17:38:22 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(const char *str, char set)
+static int	count_words(const char *str, char set)
 {
 	int	count;
 	int	i;
@@ -29,20 +29,6 @@ int	count_words(const char *str, char set)
 			i++;
 	}
 	return (count);
-}
-
-void	free_all(char **tab, int n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
-	return ;
 }
 
 char	**ft_split(char const *s, char c)

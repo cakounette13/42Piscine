@@ -6,12 +6,12 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 19:02:22 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/24 00:01:58 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/25 17:02:58 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_lengthnbr(long nbr)
+static int	ft_lengthnbr(long nbr)
 {
 	int	length;
 
