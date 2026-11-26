@@ -2,9 +2,10 @@
 
 # 📚 Libft — Your Very First C Library
 
-![Language](https://shields.io)
-![Norm](https://shields.io)
-![Status](https://shields.io)
+![Badge labeled language C, identifying the project language as C](https://img.shields.io/badge/language-C-blue)
+![Badge labeled type static library, identifying the project as a static library](https://img.shields.io/badge/type-static_library-orange)
+![Badge labeled school 42, identifying the project as part of the 42 curriculum](https://img.shields.io/badge/school-42-black)
+![Badge labeled build Makefile, identifying Makefile as the build system](https://img.shields.io/badge/build-Makefile-green)
 
 ---
 
