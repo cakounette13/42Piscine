@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 16:33:22 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/18 18:11:33 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/27 13:22:21 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -26,7 +26,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t length)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (i < length)
+	while (i < length && (str1[i] || str2[i]))
 	{
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
