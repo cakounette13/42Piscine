@@ -6,7 +6,7 @@
 /*   By: dcarine <delrieux.carine@learner.42.tech>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/22 15:21:49 by dcarine           #+#    #+#             */
-/*   Updated: 2026/11/25 17:38:22 by dcarine          ###   ########.fr       */
+/*   Updated: 2026/11/27 10:52:10 by dcarine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,33 +31,52 @@ static int	count_words(const char *str, char set)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static void	free_split(char **split, size_t j)
+{
+	while (j > 0)
+		free(split[--j]);
+	free(split);
+}
+
+static int	fill_split(char **split, char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	k;
-	char	**split;
+	size_t	len;
 
-	split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s || !split)
-		return (NULL);
 	i = 0;
 	j = 0;
-	k = 0;
 	while (s[i])
 	{
-		if (s[i] && s[i] != c)
+		if (s[i] != c)
 		{
-			while (s[i + k] && s[i + k] != c)
-				k++;
-			split[j++] = ft_substr(&s[i], 0, k);
-			i += k;
-			k = 0;
+			len = 0;
+			while (s[i + len] && s[i + len] != c)
+				len++;
+			split[j] = ft_substr(s, i, len);
+			if (!split[j])
+				return (free_split(split, j), 0);
+			j++;
+			i += len;
 		}
-		if (s[i] != '\0')
+		else
 			i++;
 	}
-	split[j] = 0;
+	split[j] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**split;
+
+	if (!s)
+		return (NULL);
+	split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
+	if (!fill_split(split, s, c))
+		return (NULL);
 	return (split);
 }
 /*
